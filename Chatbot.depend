@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1599136791 source:c:\users\hp\desktop\minor\chatbot\2.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1598901125 source:c:\users\hp\desktop\minor\chatbot\untitled3.c
+	<stdio.h>
+	<string.h>
+
+1599137092 source:c:\users\hp\desktop\minor\chatbot\3.c
+
+1599245369 source:c:\users\hp\desktop\minor\chatbot\autocorrect.c
+
+1599245264 source:c:\users\hp\desktop\minor\chatbot\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
+1599223238 source:c:\users\hp\desktop\minor\chatbot\dictionary.c
+	<stdio.h>
+	<string.h>
+
+1599507634 source:c:\users\hp\documents\github\automated-chatbot\chatbot\autofill.c
+
+1599498553 source:c:\users\hp\documents\github\automated-chatbot\chatbot\bestmatch.c
+	<stdio.h>
+	<string.h>
+
+1599508743 source:c:\users\hp\documents\github\automated-chatbot\chatbot\autocorrect.c
+
+1599223238 source:c:\users\hp\documents\github\automated-chatbot\chatbot\dictionary.c
+	<stdio.h>
+	<string.h>
+
+1599507370 source:c:\users\hp\documents\github\automated-chatbot\chatbot\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
