@@ -8,7 +8,7 @@ int main()
 
 	char* input;
 
-	printf("Hello i am here for your help mate");
+	printf("Hello I am here for your help Buddy!");
 
     int i;
 
@@ -65,6 +65,7 @@ void get_Input(char input1[])
     //printf(input);
     char cmd[50];
     char word[500];
+    char sentence[500];
     char c;
     int i,k=0;
 
@@ -75,10 +76,16 @@ void get_Input(char input1[])
 
 
    fpt=fopen("Input.txt","r");
-   printf("%s",str);
+   //printf("%s",str);
+     int x=0;
     while((fscanf(fpt,"%s",str))!=EOF)
      {
          //printf("%s",str);
+         for(int i=0;i<strlen(str);i++)
+         {
+             sentence[x++]=str[i];
+         }
+         //printf("%s",sentence);
         // printf("ssssssssss%saaaaa",str);
          if(strcmp("hi",str)==0)
          {
@@ -103,7 +110,8 @@ void get_Input(char input1[])
                 }
 
          }
-         else if(strcmp("howareyou",str)==0)
+
+         else if(strcmp("howareyou",sentence)==0)
          {
              //printf("%s",str);
 
@@ -120,6 +128,30 @@ void get_Input(char input1[])
                 break;
 	            case 4:
                     printf("I am fine");
+                break;
+
+                default : /* Optional */
+                    printf("I am sorry what?");
+                }
+
+         }
+         else if(strcmp("playmusic",sentence)==0)
+         {
+             //printf("%s",str);
+
+              switch(rand() % 5) {
+
+                case 1:
+                    printf("What is your taste in music?");
+                break;
+	            case 2:
+                    printf("What music would you like to listen?");
+                break;
+                case 3:
+                    printf("Which music?");
+                break;
+	            case 4:
+                    printf("Okay which music?");
                 break;
 
                 default : /* Optional */
