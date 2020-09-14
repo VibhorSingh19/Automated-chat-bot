@@ -6,7 +6,7 @@ const char bestmatch(char word[])
 
 
     int i;
-    char* finalword;
+    char* finalword=word;
     FILE* fp;
     int min1=0;
     fp = fopen("words_dictionary.txt", "r");
@@ -16,10 +16,11 @@ const char bestmatch(char word[])
     int col  = -1;
     int c=0;
     int min=10000;
-    while((fscanf(fp,"%s",str))!=EOF-1)
+    while((fscanf(fp,"%s",str))!=EOF)
      {
          min1=0;
          c=0;
+
          if(strlen(str)==strlen(word))
          {
 
@@ -38,6 +39,7 @@ const char bestmatch(char word[])
           {
              min=min1;
             finalword=str;
+
              return finalword;
 
           }
@@ -47,7 +49,11 @@ const char bestmatch(char word[])
 
 
      }
+     fclose(fp);
+       //  if(c==0)
+        // return word;
 
 
+return word;
     // return word;
 }

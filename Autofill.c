@@ -1,46 +1,43 @@
-
-/*const char autocorrect(char* input)
+#include<stdio.h>
+const char autofill(char word[],int c)
 {
+    int j;
+    FILE *fp;
+    char* finalword=word;;
+    fp = fopen("words_dictionary.txt", "r");
+    char str[500];
 
-    int  s1=strlen(input);
-    printf("%d",s1);
-    int a;
-    char checker[128];
+    while((fscanf(fp,"%s",str))!=EOF)
+     {
 
-    int i;
-    char ch[1];
-    for(i=0;i<s1;i++)
 
-    {
-        ch[0] = input[i];
-        if(ch[0]!=' ')
+        if(strlen(str)>3)
         {
-            printf("max2");
-            checker[i]=ch[0];
-        }
-       else if(ch[0] ==' ')
-        {
-            printf("madd");
-            printf(checker);
-            a= dictionary(checker);
-            if(a==1)
-            {
-                printf("%d",a);
-                printf("valid");
-            }
-            else if(a==-1)
-            {
-                printf("%d",a);
-                printf("not valid");
-            }
-            //checker[i]=ch[0];
-        }
 
-    }
+         if((strncmp(word,str,strlen(word)))==0)
+         {
 
-     return input;
-   // system("cls");
+             if(c==0)
+             {
+                 finalword=str;
+               //printf("%s ",str);
+
+               return finalword;
+             }
+            else if(c==1)
+            {
+                for(j=0;j<strlen(str);j++)
+                {
+                    printf(" \b\b");
+                }
+            }
+            c--;
+
+            // break;
+
+         }
+        }
+      }
+
 
 }
-*/
-

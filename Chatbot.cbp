@@ -40,6 +40,7 @@
 		<Unit filename="Dictionary.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Input.txt" />
 		<Unit filename="Main.c">
 			<Option compilerVar="CC" />
 		</Unit>
