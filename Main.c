@@ -103,6 +103,9 @@ void get_Input(char input1[])
                 break;
 	            case 4:
                     printf("Hey,long time no chat?");
+                    system("espeak hi____buddy");
+                    system("explorer https://www.google.com/");
+                    //system("explorer www.google.com");
                 break;
 
                 default : /* Optional */
