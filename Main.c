@@ -110,17 +110,29 @@ void get_Input(char input1[])
           if(strcmp(sentence,sentence1)==0)
           //if(isSubstring(sentence,sentence1)!=-1)
           {
+              int x=0;
+              int y=rand() % 3;
+              //printf("%d",y);
+              while(x<3)
+              {
+
             fgets(output,128,fp);
-            printf("%s",output);
-            f=1;
+            if(x==y)
+            {
+             printf("%s",output);
+             f=1;
+            }
+
+            x++;
+              }
           }
 
 
      }
      if(f==0)
      {
-             system("espeak I--am--sorry--what?");
-             //printf("");
+             //system("espeak I--am--sorry--what?");
+             printf("I am sorry what?");
 
      }
 
