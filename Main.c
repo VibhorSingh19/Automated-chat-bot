@@ -66,6 +66,8 @@ void get_Input(char input1[])
     char cmd[50];
     char word[500];
     char sentence[500];
+    char sentence1[500];
+    char output[500];
     char c;
     int i,k=0;
 
@@ -77,102 +79,71 @@ void get_Input(char input1[])
 
    fpt=fopen("Input.txt","r");
    //printf("%s",str);
-     int x=0;
-    while((fscanf(fpt,"%s",str))!=EOF)
+     int x=0,x1=0;
+    while(!feof(fpt))
      {
          //printf("%s",str);
-         for(int i=0;i<strlen(str);i++)
-         {
-             sentence[x++]=str[i];
-         }
+         fgets(sentence,128,fpt);
          //printf("%s",sentence);
         // printf("ssssssssss%saaaaa",str);
-         if(strcmp("hi",str)==0)
-         {
-
-              switch(rand() % 5) {
-
-                case 1:
-                    printf("hi buddy");
-                break;
-	            case 2:
-                    printf("hey whats up");
-                break;
-                case 3:
-                    printf("How are you buddy");
-                break;
-	            case 4:
-                    printf("Hey,long time no chat?");
-                    system("espeak hi____buddy");
-                    system("explorer https://www.google.com/");
-                    //system("explorer www.google.com");
-                break;
-
-                default : /* Optional */
-                    printf("I am sorry what?");
-                }
-
-         }
-
-         else if(strcmp("howareyou",sentence)==0)
-         {
-             //printf("%s",str);
-
-              switch(rand() % 5) {
-
-                case 1:
-                    printf("Fine what about you");
-                break;
-	            case 2:
-                    printf("Fine as always");
-                break;
-                case 3:
-                    printf("All good");
-                break;
-	            case 4:
-                    printf("I am fine");
-                break;
-
-                default : /* Optional */
-                    printf("I am sorry what?");
-                }
-
-         }
-         else if(strcmp("playmusic",sentence)==0)
-         {
-             //printf("%s",str);
-
-              switch(rand() % 5) {
-
-                case 1:
-                    printf("What is your taste in music?");
-                break;
-	            case 2:
-                    printf("What music would you like to listen?");
-                break;
-                case 3:
-                    printf("Which music?");
-                break;
-	            case 4:
-                    printf("Okay which music?");
-                break;
-
-                default : /* Optional */
-                    printf("I am sorry what?");
-                }
-
-         }
-         else if(strcmp("bye",str)==0)
-         {
-             printf("Have a nice day!");
-             exit(0);
-         }
 
      }
 
     fclose(fpt);
+    FILE *fp;
+    fp=fopen("reply.txt","r");
+    strcat(sentence,"\n");
+    int f=0;
+     while(!feof(fp))
+     {
 
 
+          fgets(sentence1,128,fp);
+          //printf("%s",sentence1);
+          //printf("%d",strlen(sentence1));
+          //printf("%s",sentence);
+
+          //printf("%d",strcmp(sentence,sentence1));
+
+
+          //break;
+          if(strcmp(sentence,sentence1)==0)
+          //if(isSubstring(sentence,sentence1)!=-1)
+          {
+              int x=0;
+              int y=rand() % 3;
+              //printf("%d",y);
+              while(x<3)
+              {
+
+            fgets(output,128,fp);
+            if(x==y)
+            {
+             printf("%s",output);
+             f=1;
+            }
+
+            x++;
+              }
+          }
+
+
+     }
+     if(f==0)
+     {
+             //system("espeak I--am--sorry--what?");
+             printf("I am sorry what?");
+
+     }
+
+     fclose(fp);
+        // printf("%s",sentence1);
+
+
+         //printf("%s",sentence);
+        // printf("ssssssssss%saaaaa",str);
+
+     }
 
 
      /* if(input1 != NULL)
@@ -207,7 +178,7 @@ void get_Input(char input1[])
 
 
 
-    }
+
 
 
 
