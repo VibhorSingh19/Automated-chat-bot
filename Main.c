@@ -121,6 +121,7 @@ void get_Input(char input1[])
             {
              printf("%s",output);
              f=1;
+             break;
             }
 
             x++;
