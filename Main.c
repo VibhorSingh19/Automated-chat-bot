@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include<string.h>
 #include<conio.h>
-
 int main()
 {
 
@@ -107,8 +106,8 @@ void get_Input(char input1[])
 
 
           //break;
-          if(strcmp(sentence,sentence1)==0)
-          //if(isSubstring(sentence,sentence1)!=-1)
+          //if(strcmp(sentence,sentence1)==0)
+          if(strstr(sentence,sentence1))
           {
               int x=0;
               int y=rand() % 3;
@@ -132,49 +131,34 @@ void get_Input(char input1[])
      }
      if(f==0)
      {
-             //system("espeak I--am--sorry--what?");
+             system("espeak I--am--sorry--what?");
              printf("I am sorry what?");
 
      }
 
      fclose(fp);
-        // printf("%s",sentence1);
+}
+           // printf("%s",sentence1);
 
 
          //printf("%s",sentence);
         // printf("ssssssssss%saaaaa",str);
 
-     }
 
-
-     /* if(input1 != NULL)
+  /*    if(input1 != NULL)
     {
 
-        if(isSubstring("exit" ,input1)!=-1)
+        if(isSubstring(sentence1 ,input1)!=-1)
         {
             printf("exit");
             exit(0);
             return 0;
         }
-         else if(isSubstring("hi" ,input1)!=-1)
-        {
-           printf("hi buddy") ;
-           return 0;
-        }
-      else if(isSubstring("open" ,input1)!=-1)
-        {
 
-            for(i=5;i<strlen(input1);i++)
-            {
-                cmd[k]=input1[i];
-                k++;
-            }
+    }*/
 
-            strcpy(cmd,"dir");
-            system(cmd);
-            return 0;
-          }
-*/
+
+
         //return 0;
 
 
