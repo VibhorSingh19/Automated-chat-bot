@@ -6,9 +6,10 @@ int main()
 {
 
 	char* input;
-    char es[20]="espeak -s80 -ven+f5 ";
+    char es[20]="espeak -s80 -ven+f2 ";
     strcat(es,"Hello_I_am_here_for_your_help_Vibhor!");
     system(es);
+    system("explorer http://www.google.com");
     printf("Hello I am here for your help Vibhor!");
 
     int i;
