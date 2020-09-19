@@ -6,8 +6,10 @@ int main()
 {
 
 	char* input;
-
-	printf("Hello I am here for your help Buddy!");
+    char es[20]="espeak -s80 -ven+f5 ";
+    strcat(es,"Hello_I_am_here_for_your_help_Vibhor!");
+    system(es);
+    printf("Hello I am here for your help Vibhor!");
 
     int i;
 
@@ -110,8 +112,8 @@ void get_Input(char input1[])
 
           if(strstr(sentence,"bye"))
           {
-            char es[20]="espeak ";
-            strcat(es,"Okay---bye---have---a---nice---day");
+            char es[20]="espeak -s80 -ven+f5 ";
+            strcat(es,"Okay_bye_have_a_nice_day");
              system(es);
              printf("Okay---bye---have---a---nice---day");
              exit(0);
@@ -127,7 +129,7 @@ void get_Input(char input1[])
             fgets(output,128,fp);
             if(x==y)
             {
-             char es[20]="espeak ";
+             char es[20]="espeak -s80 -ven+f5 ";
              strcat(es,output);
              system(es);
              printf("%s",output);
@@ -144,7 +146,7 @@ void get_Input(char input1[])
      }
      if(f==0)
      {
-             system("espeak I---am---sorry---what?");
+             system("espeak -s80 -ven+f5 I---am---sorry---what?");
              printf("I am sorry what?");
 
      }
