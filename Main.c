@@ -107,7 +107,16 @@ void get_Input(char input1[])
 
           //break;
           //if(strcmp(sentence,sentence1)==0)
-          if(strstr(sentence,sentence1))
+
+          if(strstr(sentence,"bye"))
+          {
+            char es[20]="espeak ";
+            strcat(es,"Okay---bye---have---a---nice---day");
+             system(es);
+             printf("Okay---bye---have---a---nice---day");
+             exit(0);
+          }
+          else if(strstr(sentence,sentence1))
           {
               int x=0;
               int y=rand() % 3;
@@ -118,6 +127,9 @@ void get_Input(char input1[])
             fgets(output,128,fp);
             if(x==y)
             {
+             char es[20]="espeak ";
+             strcat(es,output);
+             system(es);
              printf("%s",output);
              f=1;
              break;
@@ -128,10 +140,11 @@ void get_Input(char input1[])
           }
 
 
+
      }
      if(f==0)
      {
-             system("espeak I--am--sorry--what?");
+             system("espeak I---am---sorry---what?");
              printf("I am sorry what?");
 
      }

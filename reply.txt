@@ -1,24 +1,25 @@
 hi
-hey buddy!
-how are you buddy?
-whats up buddy?
+hey---buddy!
+how---are---you---buddy?
+whats---up---buddy?
 hey
-hey buddy!
-how are you buddy?
-whats up buddy?
+hey---buddy!
+how---are---you---buddy?
+whats---up---buddy?
 hello
-hey buddy!
-how are you buddy?
-whats up buddy?
+hey---buddy!
+how---are---you---buddy?
+whats---up---buddy?
 your name
-my name is binod
-bro my name is binod
-people calls me binod
+my---name---is---binod
+bro---my---name---is---binod
+people---calls---me---binod
 how are you
-i am fine what about you?
-i am fine.
-i dont have feelings.
+i---am---fine---what---about---you?
+i---am---fine.
+i---dont---have---feelings.
 fine
-oh nice to hear that.
+oh---nice---to---hear---that.
 cool!
-nice. 
+nice
+
