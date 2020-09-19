@@ -6,10 +6,10 @@ int main()
 {
 
 	char* input;
-    char es[20]="espeak -s80 -ven+f2 ";
+    char es[20]="espeak -v +f2 ";
     strcat(es,"Hello_I_am_here_for_your_help_Vibhor!");
     system(es);
-    system("explorer http://www.google.com");
+    //("explorer http://www.google.com");
     printf("Hello I am here for your help Vibhor!");
 
     int i;
@@ -94,7 +94,7 @@ void get_Input(char input1[])
     fclose(fpt);
     FILE *fp;
     fp=fopen("reply.txt","r");
-    strcat(sentence,"\n");
+    //strcat(sentence,"\n");
     int f=0;
      while(!feof(fp))
      {
