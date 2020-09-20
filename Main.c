@@ -101,6 +101,8 @@ void get_Input(char input1[])
 
 
           fgets(sentence1,128,fp);
+          int size=strlen(sentence1);
+          sentence1[size-1] ='\0';
           //printf("%s",sentence1);
           //printf("%d",strlen(sentence1));
           //printf("%s",sentence);
@@ -113,10 +115,10 @@ void get_Input(char input1[])
 
           if(strstr(sentence,"bye"))
           {
-            char es[20]="espeak -s80 -ven+f5 ";
+            char es[20]="espeak -s80 -ven+f2 ";
             strcat(es,"Okay_bye_have_a_nice_day");
              system(es);
-             printf("Okay---bye---have---a---nice---day");
+             printf("Okay-bye-have-a-nice-day");
              exit(0);
           }
           else if(strstr(sentence,sentence1))
@@ -130,7 +132,7 @@ void get_Input(char input1[])
             fgets(output,128,fp);
             if(x==y)
             {
-             char es[20]="espeak -s80 -ven+f5 ";
+             char es[20]="espeak -s80 -ven+f2 ";
              strcat(es,output);
              system(es);
              printf("%s",output);
