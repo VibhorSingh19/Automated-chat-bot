@@ -69,7 +69,10 @@ void get_Input(char input1[])
     char word[500];
     char sentence[500];
     char sentence1[500];
+    char sentence2[500];
     char output[500];
+    char output1[500];
+
     char c;
     int i,k=0;
 
@@ -142,6 +145,36 @@ void get_Input(char input1[])
 
             x++;
               }
+          }
+          else if(strstr(sentence,"meaning_of"))
+          {
+
+              char *orig = sentence;
+              char *res;
+                // Skip to first space
+              for (res = orig ; *res && *res != ' ' ; res++)
+              ;
+              // If we found a space, skip it too:
+              if (*res) res++;
+              printf("%s",res);
+              FILE *fp2;
+                fp2=fopen("meaning.txt","r");
+                //strcat(sentence,"\n");
+                while(!feof(fp2))
+                {
+                    fgets(sentence2,128,fp2);
+                    int size2=strlen(sentence2);
+                    sentence2[size2-1] ='\0';
+                    if(strstr(res,sentence2))
+                    {
+                        fgets(output1,128,fp2);
+                        char es[20]="espeak -s80 -ven+f2 ";
+                        strcat(es,output1);
+                        system(es);
+                        printf("%s",output1);
+                    }
+                }
+
           }
 
 
