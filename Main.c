@@ -172,6 +172,8 @@ void get_Input(char input1[])
                         strcat(es,output1);
                         system(es);
                         printf("%s",output1);
+                        break;
+                        f=1;
                     }
                 }
 
