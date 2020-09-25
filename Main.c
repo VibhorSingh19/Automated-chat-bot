@@ -156,7 +156,6 @@ void get_Input(char input1[])
               ;
               // If we found a space, skip it too:
               if (*res) res++;
-              printf("%s",res);
               FILE *fp2;
                 fp2=fopen("meaning.txt","r");
                 //strcat(sentence,"\n");
@@ -169,11 +168,13 @@ void get_Input(char input1[])
                     {
                         fgets(output1,128,fp2);
                         char es[20]="espeak -s80 -ven+f2 ";
+                        strcat(es,"It_means_");
                         strcat(es,output1);
                         system(es);
                         printf("%s",output1);
-                        break;
                         f=1;
+                        break;
+
                     }
                 }
 
