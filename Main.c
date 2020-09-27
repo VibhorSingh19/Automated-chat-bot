@@ -42,7 +42,6 @@ int isSubstring(char* s1, char* s2)
     {
         int j;
 
-
         for (j = 0; j < M; j++)
             {
                 if (s2[i + j] != s1[j])
@@ -52,7 +51,6 @@ int isSubstring(char* s1, char* s2)
             }
         if (j == M)
            {
-
             return i;
            }
     }
@@ -105,7 +103,9 @@ void get_Input(char input1[])
 
           fgets(sentence1,128,fp);
           int size=strlen(sentence1);
+          //sentence1[size-1] ='\0';
           sentence1[size-1] ='\0';
+
           //printf("%s",sentence1);
           //printf("%d",strlen(sentence1));
           //printf("%s",sentence);
@@ -124,8 +124,8 @@ void get_Input(char input1[])
              printf("Okay-bye-have-a-nice-day");
              exit(0);
           }
-          //else if(strstr(sentence,sentence1))
-          else if(isSubstring(sentence,sentence1)!=-1)
+          else if(strstr(sentence,sentence1))
+          //else if(isSubstring(sentence,sentence1)!=-1)
           {
               int x=0;
               int y=rand() % 3;
