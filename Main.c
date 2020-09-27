@@ -31,10 +31,10 @@ int main()
 
 
 }
-/*int isSubstring(char* s1, char* s2)
+int isSubstring(char* s1, char* s2)
 {
-    printf(s1);
-    printf(s2);
+    //printf(s1);
+    //printf(s2);
     int M = strlen(s1);
     int N = strlen(s2);
     int i;
@@ -59,7 +59,7 @@ int main()
 
     return -1;
 }
-*/
+
 void get_Input(char input1[])
 {
     char str[500];
@@ -124,7 +124,8 @@ void get_Input(char input1[])
              printf("Okay-bye-have-a-nice-day");
              exit(0);
           }
-          else if(strstr(sentence,sentence1))
+          //else if(strstr(sentence,sentence1))
+          else if(isSubstring(sentence,sentence1)!=-1)
           {
               int x=0;
               int y=rand() % 3;
