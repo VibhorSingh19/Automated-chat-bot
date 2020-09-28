@@ -10,19 +10,19 @@ whats_up_buddy?
 hey_buddy!
 how_are_you_buddy?
 whats_up_buddy?
-hello
+ hello 
 hey_buddy!
 how_are_you_buddy?
 whats_up_buddy?
-your name
+ your name 
 my_name_is_binod
 bro_my_name_is_binod
 people_calls_me_binod
-how are you
+ how are you 
 i_am_fine_what_about_you?
 i_am_fine.
 i_dont_have_feelings.
-fine
+ fine 
 oh_nice_to_hear_that.
 cool!
 nice
