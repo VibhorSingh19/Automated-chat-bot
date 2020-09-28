@@ -124,8 +124,8 @@ void get_Input(char input1[])
              printf("Okay-bye-have-a-nice-day");
              exit(0);
           }
-          else if(strstr(sentence,sentence1))
-          //else if(isSubstring(sentence,sentence1)!=-1)
+          //else if(strstr(sentence,sentence1))
+          else if(isSubstring(sentence,sentence1)!=-1)
           {
               int x=0;
               int y=rand() % 3;

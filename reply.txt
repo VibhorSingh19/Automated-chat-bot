@@ -1,12 +1,12 @@
-hi
+ hi 
 hey_buddy!
 how_are_you_buddy?
 whats_up_buddy?
-hy
+ hy 
 hey_buddy!
 how_are_you_buddy?
 whats_up_buddy?
-hey
+ hey 
 hey_buddy!
 how_are_you_buddy?
 whats_up_buddy?
