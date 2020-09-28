@@ -65,12 +65,14 @@ void get_Input(char input1[])
     //printf(input);
     char cmd[50];
     char word[500];
-    char sentence[500];
+    char sentence[500]=" ";
+    char sen[500];
     char sentence1[500];
     char sentence2[500];
     char output[500];
     char output1[500];
-
+    time_t t;
+    time(&t);
     char c;
     int i,k=0;
 
@@ -86,8 +88,7 @@ void get_Input(char input1[])
     while(!feof(fpt))
      {
          //printf("%s",str);
-         fgets(sentence,128,fpt);
-         //printf("%s",sentence);
+         fgets(sen,128,fpt);
         // printf("ssssssssss%saaaaa",str);
 
      }
@@ -95,7 +96,11 @@ void get_Input(char input1[])
     fclose(fpt);
     FILE *fp;
     fp=fopen("reply.txt","r");
-    //strcat(sentence,"\n");
+    //sentence[]=" ";
+    strcat(sentence,sen);
+    strcat(sentence," ");
+    //printf("%s",sentence);
+
     int f=0;
      while(!feof(fp))
      {
@@ -124,8 +129,8 @@ void get_Input(char input1[])
              printf("Okay-bye-have-a-nice-day");
              exit(0);
           }
-          //else if(strstr(sentence,sentence1))
-          else if(isSubstring(sentence,sentence1)!=-1)
+          else if(strstr(sentence,sentence1))
+          //else if(isSubstring(sentence,sentence1)!=-1)
           {
               int x=0;
               int y=rand() % 3;
@@ -147,10 +152,10 @@ void get_Input(char input1[])
             x++;
               }
           }
-          else if(strstr(sentence,"meaning_of"))
+          else if(strstr(sen,"meaning_of"))
           {
 
-              char *orig = sentence;
+              char *orig = sen;
               char *res;
                 // Skip to first space
               for (res = orig ; *res && *res != ' ' ; res++)
@@ -168,19 +173,27 @@ void get_Input(char input1[])
                     if(strcmp(res,sentence2)==0)
                     {
                         fgets(output1,128,fp2);
-                        /*
-                        char es[20]="espeak -s80 -ven+f2 ";
+                        /* char es[20]="espeak -s80 -ven+f2 ";
                         strcat(es,"It_means_");
                         strcat(es,output1);
                         system(es);*/
                         printf("%s",output1);
                         f=1;
-                        break;
-
+                    }
+                    if(f==1)
+                    {
+                    break;
                     }
                 }
 
           }
+
+          else if(strcmp("time",sen)==0)
+                {
+                    printf(ctime(&t));
+                    f=1;
+                    break;
+                }
 
 
 
