@@ -6,11 +6,11 @@ int main()
 {
 
 	char* input;
-    char es[20]="espeak -v +f2 ";
-    strcat(es,"Hello_I_am_here_for_your_help_Vibhor!");
-    system(es);
+    /*char es[20]="espeak -v +f2 ";
+    strcat(es,"Hello_I_am_here_for_your_help_Buddy!");
+    system(es);*/
     //("explorer http://www.google.com");
-    printf("Hello I am here for your help Vibhor!");
+    printf("Hello I am here for your help Buddy!");
 
     int i;
 
@@ -136,9 +136,9 @@ void get_Input(char input1[])
             fgets(output,128,fp);
             if(x==y)
             {
-             char es[20]="espeak -s80 -ven+f2 ";
+             /*char es[20]="espeak -s80 -ven+f2 ";
              strcat(es,output);
-             system(es);
+             system(es);*/
              printf("%s",output);
              f=1;
              break;
@@ -168,10 +168,11 @@ void get_Input(char input1[])
                     if(strcmp(res,sentence2)==0)
                     {
                         fgets(output1,128,fp2);
+                        /*
                         char es[20]="espeak -s80 -ven+f2 ";
                         strcat(es,"It_means_");
                         strcat(es,output1);
-                        system(es);
+                        system(es);*/
                         printf("%s",output1);
                         f=1;
                         break;
@@ -186,7 +187,7 @@ void get_Input(char input1[])
      }
      if(f==0)
      {
-             system("espeak -s80 -ven+f5 I---am---sorry---what?");
+             //system("espeak -s80 -ven+f5 I---am---sorry---what?");
              printf("I am sorry what?");
 
      }
