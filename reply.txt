@@ -1,28 +1,28 @@
  hi 
-hey_buddy!
-how_are_you_buddy?
-whats_up_buddy?
+hey buddy!
+how are you buddy?
+whats up buddy?
  hy 
-hey_buddy!
-how_are_you_buddy?
-whats_up_buddy?
+hey buddy!
+how are you buddy?
+whats up buddy?
  hey 
-hey_buddy!
-how_are_you_buddy?
-whats_up_buddy?
+hey buddy!
+how are you buddy?
+whats up buddy?
  hello 
-hey_buddy!
-how_are_you_buddy?
-whats_up_buddy?
+hey buddy!
+how are you buddy?
+whats up buddy?
  your name 
-my_name_is_binod
-bro_my_name_is_binod
-people_calls_me_binod
+my name is binod
+bro my name is binod
+people calls me binod
  how are you 
-i_am_fine_what_about_you?
-i_am_fine.
-i_dont_have_feelings.
+i am fine what about you?
+i am fine.
+i dont have feelings.
  fine 
-oh_nice_to_hear_that.
+oh nice to hear that.
 cool!
 nice
