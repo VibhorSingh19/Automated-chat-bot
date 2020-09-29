@@ -20,30 +20,6 @@ int main()
 
 
 }
-int isSubstring(char* s1, char* s2)
-{
-    int M = strlen(s1);
-    int N = strlen(s2);
-    int i;
-    for (int i = 0; i <= N - M; i++)
-    {
-        int j;
-
-        for (j = 0; j < M; j++)
-            {
-                if (s2[i + j] != s1[j])
-                {
-                    break;
-                }
-            }
-        if (j == M)
-           {
-            return i;
-           }
-    }
-
-    return -1;
-}
 
 void get_Input(char input1[])
 {
@@ -112,6 +88,8 @@ void get_Input(char input1[])
 
             x++;
               }
+              if(f==1)
+                break;
           }
           else if(strstr(sen,"meaning_of"))
           {
