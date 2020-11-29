@@ -23,7 +23,9 @@ int main()
 
 void get_Input(char input1[])
 {
-    
+    char str[500];
+    char cmd[50];
+    char word[500];
     char sentence[500]=" ";
     char sen[500];
     char sentence1[500];
