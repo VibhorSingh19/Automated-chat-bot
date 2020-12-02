@@ -119,6 +119,17 @@ void get_Input(char input1[])
                 }
 
           }
+          else if(strstr(sen,"play"))
+          {
+
+              char *orig = sen;
+              char *res;
+              for (res = orig ; *res && *res != ' ' ; res++)
+              ;
+              if (*res) res++;
+              PlaySound(TEXT(""),NULL,SND_SYNC);
+              return 0;
+          }
 
           else if(strcmp("time",sen)==0)
                 {
