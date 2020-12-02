@@ -77,9 +77,11 @@
 	<stdio.h>
 	<string.h>
 
-1601439613 source:c:\users\hp\desktop\minors\main.c
+1606935034 source:c:\users\hp\desktop\minors\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
+	<windows.h>
+	<MMsystem.h>
 

@@ -127,8 +127,8 @@ void get_Input(char input1[])
               for (res = orig ; *res && *res != ' ' ; res++)
               ;
               if (*res) res++;
-              PlaySound(TEXT(""),NULL,SND_SYNC);
-              return 0;
+              PlaySound("C:\\Users\\hp\\Desktop\\minors\\music1.wav", NULL, SND_ASYNC);
+    return 0;
           }
 
           else if(strcmp("time",sen)==0)
