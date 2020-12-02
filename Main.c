@@ -6,8 +6,11 @@ int main()
 {
 
 	char* input;
-     printf("Hello I am here for your help Buddy!");
+	char es[20]="espeak -v +f2 ";
+    strcat(es,"Hello_I_am_here_for_your_help_Vibhor!");
+    system(es);
 
+     printf("Hello I am here for your help Buddy!");
     int i;
 
 	do
