@@ -7,7 +7,7 @@ int main()
 
 	char* input;
 	char es[20]="espeak -v +f2 ";
-    strcat(es,"Hello_I_am_here_for_your_help_Vibhor!");
+    strcat(es,"Hello_I_am_here_for_your_help_Buddy!");
     system(es);
 
      printf("Hello I am here for your help Buddy!");
@@ -132,6 +132,10 @@ void get_Input(char input1[])
      }
      if(f==0)
      {
+         char es[20]="espeak -v +f2 ";
+    strcat(es,"I_am_sorry_what?");
+    system(es);
+
              printf("I am sorry what?");
 
      }
