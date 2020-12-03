@@ -25,7 +25,6 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="gcc play_sound.c -lwinmm" />
 				</Linker>
 			</Target>
 		</Build>

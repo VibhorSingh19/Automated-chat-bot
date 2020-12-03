@@ -9,8 +9,8 @@ int main()
 	char es[20]="espeak -v +f2 ";
     strcat(es,"Hello_I_am_here_for_your_help_Buddy!");
     system(es);
-
      printf("Hello I am here for your help Buddy!");
+
     int i;
 
 	do
@@ -68,6 +68,9 @@ void get_Input(char input1[])
 
           if(strstr(sentence,"exit"))
           {
+              char es[20]="espeak -v +f2 ";
+    strcat(es,"Okay_bye_have_a_nice_day");
+    system(es);
              printf("Okay bye have a nice day");
              exit(0);
           }
@@ -81,6 +84,9 @@ void get_Input(char input1[])
             fgets(output,128,fp);
             if(x==y)
             {
+             char es[20]="espeak -s80 -ven+f2 ";
+             strcat(es,output);
+             system(es);
              printf("%s",output);
              f=1;
              break;
@@ -110,6 +116,10 @@ void get_Input(char input1[])
                     {
                         fgets(output1,128,fp2);
                         printf("%s",output1);
+                        char es[20]="espeak -s80 -ven+f2 ";
+                        strcat(es,output1);
+                        system(es);
+
                         f=1;
                     }
                     if(f==1)
@@ -127,8 +137,14 @@ void get_Input(char input1[])
               for (res = orig ; *res && *res != ' ' ; res++)
               ;
               if (*res) res++;
-              PlaySound("C:\\Users\\hp\\Desktop\\minors\\music1.wav", NULL, SND_ASYNC);
-    return 0;
+              FILE *fp2;
+              char song[20]="F:/";
+              strcat(song,res);
+              strcat(song,".mp3");
+
+              system(song);
+              return(0);
+
           }
 
           else if(strcmp("time",sen)==0)
@@ -143,7 +159,8 @@ void get_Input(char input1[])
      }
      if(f==0)
      {
-         char es[20]="espeak -v +f2 ";
+
+              char es[20]="espeak -v +f2 ";
     strcat(es,"I_am_sorry_what?");
     system(es);
 
