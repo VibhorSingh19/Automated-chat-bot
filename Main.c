@@ -57,6 +57,8 @@ void get_Input(char input1[])
     fclose(fpt);
     FILE *fp;
     fp=fopen("reply.txt","r");
+    FILE *fp1;
+    fp1=fopen("funfacts.txt","r");
     strcat(sentence,sen);
     strcat(sentence," ");
     int f=0;
@@ -87,6 +89,26 @@ void get_Input(char input1[])
              char es[20]="espeak -s80 -ven+f2 ";
              strcat(es,output);
              system(es);
+             printf("%s",output);
+             f=1;
+             break;
+            }
+
+            x++;
+              }
+              if(f==1)
+                break;
+          }
+          else if(strstr(sentence,"funfacts"))
+          {
+              int x=0;
+              int y=rand() % 6;
+              while(x<6)
+              {
+
+            fgets(output,128,fp1);
+            if(x==y)
+            {
              printf("%s",output);
              f=1;
              break;
@@ -129,6 +151,39 @@ void get_Input(char input1[])
                 }
 
           }
+          else if(strstr(sen,"Quotes"))
+          {
+
+              char *orig = sen;
+              char *res;
+              for (res = orig ; *res && *res != ' ' ; res++)
+              ;
+              if (*res) res++;
+              FILE *fp2;
+                fp2=fopen("meaning.txt","r");
+                while(!feof(fp2))
+                {
+                    fgets(sentence2,128,fp2);
+                    int size2=strlen(sentence2);
+                    sentence2[size2-1] ='\0';
+                    if(strcmp(res,sentence2)==0)
+                    {
+                        fgets(output1,128,fp2);
+                        printf("%s",output1);
+                        char es[20]="espeak -s80 -ven+f2 ";
+                        strcat(es,output1);
+                        system(es);
+
+                        f=1;
+                    }
+                    if(f==1)
+                    {
+                    break;
+                    }
+                }
+
+          }
+
           else if(strstr(sen,"play"))
           {
 
