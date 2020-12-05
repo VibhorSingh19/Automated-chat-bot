@@ -16,6 +16,7 @@ const char autocorrect()
             string2[j]='\0';
         }
 
+
 while(1)
 {
     if(string[i]=='\0')
